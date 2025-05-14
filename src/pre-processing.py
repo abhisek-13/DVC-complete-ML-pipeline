@@ -90,6 +90,7 @@ def preprocess_df(df: pd.DataFrame, text_column = 'text', target_column = 'targe
       
       # removing null values
       # df = df.dropna(subset=[text_column, target_column])
+      
       print(type(df))
       # applying transform_text function to the text column
       df[text_column] = df[text_column].apply(transform_text)
