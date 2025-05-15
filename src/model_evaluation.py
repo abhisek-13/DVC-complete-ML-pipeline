@@ -12,14 +12,14 @@ log_dir = 'logs'
 os.makedirs(log_dir, exist_ok=True)
 
 # logger object
-logger = logging.getLogger("model_training")
+logger = logging.getLogger("model_evaluation")
 logger.setLevel('DEBUG')
 
 # console handler
 console_handler = logging.StreamHandler()
 console_handler.setLevel('DEBUG')
 
-log_file_path = os.path.join(log_dir, 'model_training.log')
+log_file_path = os.path.join(log_dir, 'model_evaluation.log')
 
 # file handler
 file_handler = logging.FileHandler(log_file_path)
