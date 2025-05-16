@@ -35,7 +35,7 @@ file_handler.setFormatter(formatter)
 logger.addHandler(console_handler)
 logger.addHandler(file_handler)
 
-def loag_params(params_path: str) -> dict:
+def load_params(params_path: str) -> dict:
   """Loads the parameters from the given YAML file.
   Args:
     params_path (str): The path to the YAML file containing parameters.
@@ -131,7 +131,7 @@ def main():
     It loads the data from a CSV file, trains a Random Forest Classifier, and saves the trained model.
     """
     try:
-        params = loag_params(params_path='params.yaml')['model_training']
+        params = load_params(params_path='params.yaml')['model_training']
         
         train_data = load_data('data/processed/train_tfidf.csv')
         

@@ -34,7 +34,7 @@ file_handler.setFormatter(formatter)
 logger.addHandler(console_handler)
 logger.addHandler(file_handler)
 
-def loag_params(params_path: str) -> dict:
+def load_params(params_path: str) -> dict:
   """Loads the parameters from the given YAML file.
   Args:
     params_path (str): The path to the YAML file containing parameters.
@@ -117,7 +117,7 @@ def main():
   It loads the data from a URL, preprocesses it, splits it into training and testing sets,
   """
   try:
-    params = loag_params(params_path="params.yaml")
+    params = load_params(params_path="params.yaml")
     test_size = params['data_ingestion']['test_size']
     
     data_url = "https://raw.githubusercontent.com/vikashishere/YT-MLOPS-Complete-ML-Pipeline/refs/heads/main/experiments/spam.csv"

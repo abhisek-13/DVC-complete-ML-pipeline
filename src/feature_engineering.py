@@ -34,7 +34,7 @@ logger.addHandler(console_handler)
 logger.addHandler(file_handler)
 
 
-def loag_params(params_path: str) -> dict:
+def load_params(params_path: str) -> dict:
   """Loads the parameters from the given YAML file.
   Args:
     params_path (str): The path to the YAML file containing parameters.
@@ -126,7 +126,7 @@ def main():
     This function is the main entry point for the script. It loads the dataset, preprocesses it, and saves the preprocessed DataFrame.
     """
     try:
-        params = loag_params(params_path='params.yaml')
+        params = load_params(params_path='params.yaml')
         max_features = params['feature_engineering']['max_features']
         
         train_data = load_data("data/interim/train_processed.csv")
